@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    viewport 
     <meta charset="UTF-8">
     <title>Template Loader</title>
 </head>
 <body>
     <ul id="nav">
-        <li id="about-link">About</li>
-        <li id="contact-link">Contact</li>
+        <li id="about-link"><a href="#" onclick="load('about')">About</a></li>
+        <li id="contact-link"><a href="#" onclick="load('contact')">Contact</a></li>
     </ul>
 
     <div id="content">Home</div>
     
-    <script src="router.js"></script>
+    <script>
+        function load(link_title) {
+            document.getElementById("content").innerHTML = `<object type="text/html" data="${link_title}.html"></object>`;
+        };
+    </script>
 </body>
 </html>
