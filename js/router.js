@@ -1,12 +1,18 @@
-function load(path) {
+function load() {
+    const path = getPath();
     document.getElementById("content").innerHTML = `<object type="text/html" data="partials/${path}.html"></object>`;
+};
+
+function getPath() {
+    return window.location.href.split("#/")[1];
 };
 
 window.onhashchange = function(event) {
     event.preventDefault();
-    const url = window.location.href;
-    const path = url.split(".com")[1];
-    if(path === undefined) return;
-    console.log(`loading ${path}`);
-    load(path);
+    load();
+};
+
+window.onload = function(event) {
+    event.preventDefault();
+    load();
 };
