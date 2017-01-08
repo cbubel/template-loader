@@ -36,11 +36,6 @@ small, .font_small {font-size: 0.707em;}
 body {
     width: 960px;
     margin: 0 auto;
-    height: 100%;
-}
-
-object {
-    width: 100%;
 }
 
 ul {
