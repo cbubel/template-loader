@@ -1,5 +1,6 @@
 function load() {
-    const path = getPath();
+    let path = getPath();
+    if(path === "" || path === undefined) path = "home";
     document.getElementById("content").innerHTML = `<object type="text/html" data="partials/${path}.html"></object>`;
 };
 
