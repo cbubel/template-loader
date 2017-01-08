@@ -1,6 +1,8 @@
+const HOME_PARTIAL = "home"; // home partial filename
+
 function load() {
     let path = getPath();
-    if(path === "" || path === undefined) path = "home";
+    if(path === "" || path === undefined) path = HOME_PARTIAL;
     document.getElementById("content").innerHTML = `<object type="text/html" data="partials/${path}.html"></object>`;
 };
 
